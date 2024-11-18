@@ -24,3 +24,17 @@
       # output: 6,7,8,9
 # range(0, 10, 2)
       # output: 0, 2, 4, 6, 8
+
+# for i in range(3):
+#       print(i)
+# output: 0, 1, 2
+
+# for i in range(3, 31):
+#       print(i)
+
+# for i in range(3, 33, 3):
+#       print(i,end=",")
+#       output: 3,6,9,12,15,18,21,24,27,30
+
+# Note: end="", this function is used to print the elements in same line
+
