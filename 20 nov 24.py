@@ -2,6 +2,14 @@
 #       for col in range(5-row):
 #             print('*', end='')
 #       print()
+
+
+# for i in range(5):
+#       for j in range(5, i, -1):
+#             print("*", end='')
+            
+#       print()
+
 # *****
 # ****
 # ***
@@ -48,17 +56,27 @@
 #  *   *
 # *     *
 # ----------------------------------------------------------------------------------------------------
-import math
-rows = int(input('enter rows: '))
-colum = rows * 2 + 1
+# import math
+# rows = int(input('enter rows: '))
+# colum = rows * 2 + 1
 
-for row in range(rows):
-      for col in range(colum):
-            place = math.floor(colum/(row+2))
-            # print()
-            rev = colum - place
-            if place == col or rev == col:
-                  print('*', end='')
+# for row in range(rows):
+#       for col in range(colum):
+#             place = math.floor(colum/(row+2))
+#             # print()
+#             rev = colum - place
+#             if place == col or rev == col:
+#                   print('*', end='')
+#             else:
+#                   print(" ", end="")
+#       print()
+# ----------------------------------------------------------------------------------------------------
+
+for i in range(5):
+      for j in range(5, i, -1):
+            if i <= j:
+                  print('_', end='')
+                  
             else:
-                  print(" ", end="")
+                  print("*", end='')
       print()
