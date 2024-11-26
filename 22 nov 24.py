@@ -62,7 +62,7 @@
 
 # --------------------------------------------------------------------------------------------------------------------
 
-# swiss application 
+# qwiz application 
 # it will retrun true or false. 
 
 # print('answer the following question...')
