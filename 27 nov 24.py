@@ -22,7 +22,7 @@
 # for i in spt:
 #       print(len(i), end=',')
 
-sen = 'the king to back to his terotory'
+# sen = 'the king to back to his terotory'
 # spt = sen.split('o')
 # print(spt)
 # for i in spt:
@@ -59,4 +59,9 @@ sen = 'the king to back to his terotory'
 #       for j in i:
 #             res *= int(j)
 #       print(res)
+
+from collections import Counter
+val = 'Hello worldhH'
+
+print(Counter(val))
 
