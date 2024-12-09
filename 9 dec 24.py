@@ -32,13 +32,22 @@
 # val = input()
 # print(len(tuple([x for x in (1,2,3, 'rama', 'rama') if str(x) == val])))
 # here we are converting a list into tuple and finding the length of that tuple
-import sys
-a = (1,2,3, 'rama', 'rama')
-print(sys.getsizeof(a))
+# import sys
+# a = (1,2,3, 'rama', 'rama')
+# print(sys.getsizeof(a))
 # // 80
 
-a1 = [1,2,3, 'rama', 'rama']
-print(sys.getsizeof(a1))
+# a1 = [1,2,3, 'rama', 'rama']
+# print(sys.getsizeof(a1))
 # // 104
 
 # by comparing with list and tupple, tuple consumes less storage volume 
+n = 10
+a, b = 0, 1
+sum = 0
+for _ in range(n):
+    print(sum, end=" ")
+    sum = a + b
+    a = a + b
+    b = a
+#     a, b = b, a + b
