@@ -58,52 +58,68 @@ class Fighter_plane(Plane):
 
 tfi_1000 = ['rrr', 'kalki', 'bahubali 2', 'pushpa']
 tfi_500 = ['bahubali 1 ', 'animal', 'salar', 'devara']
-tfi_flop = ['adipurush', 'sahoo', 'devara']
-
-def display1000():
+tfi_flop = ['adipurush', 'sahoo', 'nakshatram']
+            
+def display(list):
       print('1000 cr films')
-      for film in tfi_1000:
+      for film in list:
             print(film)
+class Club500:
+      def silver(self):
+            print('this movie is a silver jublee')
+class Club1000(Club500):
+      def gold(self):
+            print('this movie has a golden jublee')
 
-def display500():
-      print('500 cr films')
-      for film in tfi_500:
-            print(film)
-
+c1 = Club1000()
+c1.silver()
+c1.gold()
+            
 class Newfilm:
       def adding_1000(self, name):
             self.name = name
             tfi_1000.append(self.name)
-            print('new film added into club====>',name)
-            display1000()
-            
+            print('new film added====> ',name)
+            display(tfi_1000) 
+                       
       def adding_500(self, name):
             self.name = name
             tfi_500.append(self.name)
-            print('new film added into club====>', name)
-            display500()
+            print('new film added====> ', name)
+            display(tfi_500)
+            
+      def adding_flop(self, name):
+            self.name = name
+            tfi_flop.append(self.name)
+            print('new film added ====> ', name)
+            display(tfi_flop)
 
 cinima = Newfilm()
+
 # cinima.adding_1000('puspha 2')
 # cinima.adding_500('game changer')
 while True:
       print('1. add film into 1000 club')
       print('2. add film into 500 club')
+      print('3. add film into flop club')
+      print('4. exit')
 
       user_input = int(input('enter user choice: '))
-      ciima = int(input('enter cinima name: '))
+      cinima_name = input('enter cinima name: ')
 
       if(user_input == 1):
             print('adding film into 1000 club')
-            cinima.adding_1000(cinima)
+            cinima.adding_1000(cinima_name)
+            
       elif(user_input == 2):
             print('adding film into 500 club')
-            cinima.adding_1000(cinima)
+            cinima.adding_500(cinima_name)
+            
       elif(user_input == 3):
             print('adding film into flop club')
-            cinima.adding_flop(cinima)
+            cinima.adding_flop(cinima_name)
             
-
-
-            
+      elif(user_input == 4):
+            print("EXIT")
+            break
       
