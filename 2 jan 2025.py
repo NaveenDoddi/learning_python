@@ -13,6 +13,80 @@
 
 #       cyclic (python will not allowed)
 
+
+# advantages
+#       * code reusability
+#       * reduce the development time
+#       * easy 
+
+# ------------------------------------------------------------------------------------
+# single level
+# taking properties from parent class to child class at one stage
+class Alpha:
+      def fun(self):
+            print('full *alpha* fun is happening')
+
+class Beta(Alpha):
+      pass
+
+# using1 = Beta()
+# using1.fun()
+
+# in pyton every thing inheritng from class
+# print(dir(Alpha))
+# ------------------------------------------------------------------------------------
+# multilevel
+
+# child become a parent, then parent become a child
+# multiple single level inheritence is called as multilevel inheritance
+class Alpha:
+      def fun1(self):
+            print('full *alpha* fun is happening')
+
+class Beta(Alpha):
+      def fun2(self):
+            print('full *Beta* fun is happening')
+            
+class Gama(Beta):
+      pass
+
+# using1 = Gama()
+# using1.fun1()
+# using1.fun2()
+
+# ------------------------------------------------------------------------------------
+# multiple
+# taking properties from mutliple parent classes to child class is called multiple inheritance
+
+class Alpha:
+      def fun1(self):
+            print('full *alpha* fun is happening')
+class Beta:
+      def fun2(self):
+            print('full *Beta* fun is happening')      
+class Gama(Alpha,Beta):
+      pass
+
+# using1 = Gama()
+# using1.fun1()
+# using1.fun2()
+
+# ------------------------------------------------------------------------------------
+# hiracle inheritance
+# taking properties from one parent class to multiple child classes is called hiracle inheritance
+
+
+class Alpha:
+      def fun1(self):
+            print('full *alpha* fun is happening')
+class Beta(Alpha):
+      pass  
+class Gama(Alpha):
+      pass
+
+
+
+
 class Plane:
       def fly(self):
             print('flying')
@@ -71,9 +145,9 @@ class Club1000(Club500):
       def gold(self):
             print('this movie has a golden jublee')
 
-c1 = Club1000()
-c1.silver()
-c1.gold()
+# c1 = Club1000()
+# c1.silver()
+# c1.gold()
             
 class Newfilm:
       def adding_1000(self, name):
