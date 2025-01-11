@@ -1,10 +1,14 @@
 <html>
 <head>
-  <title>Leaflet Map - India Example</title>
-  <!-- Link to Leaflet CSS file -->
+  <title>Leaflet Route Map - Mumbai to Hyderabad</title>
+  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <!-- Link to Leaflet JavaScript file -->
+  <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <!-- Leaflet Routing Machine CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+  <!-- Leaflet Routing Machine JS -->
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
   <style>
     #map {
       height: 400px;
@@ -17,27 +21,25 @@
   <div id="map"></div>
   <script>
     // Initialize the map and set the view to India
-    var map = L.map('map').setView([20.5937, 78.9629], 5); // Coordinates of India
+    var map = L.map('map').setView([18.5, 75], 6);
 
     // Add the tile layer (OpenStreetMap)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Add a marker for Mumbai with a popup
-    var mumbaiMarker = L.marker([19.0760, 72.8777]).addTo(map)
-      .bindPopup('<b>Mumbai</b><br/>The financial capital of India.');
-
-    // Add a marker for Hyderabad with a popup
-    var hyderabadMarker = L.marker([17.3850, 78.4867]).addTo(map)
-      .bindPopup('<b>Hyderabad</b><br/>Known as the City of Pearls.');
-
-    // Optionally, add a circle around Mumbai for better visual representation
-    var circle = L.circle([19.0760, 72.8777], {
-      color: 'blue',
-      radius: 30000 // Radius in meters
+    // Add the routing control
+    L.Routing.control({
+      waypoints: [
+        L.latLng(19.0760, 72.8777), // Mumbai
+        L.latLng(17.3850, 78.4867)  // Hyderabad
+      ],
+      routeWhileDragging: true, // Enable dragging of waypoints
+      showAlternatives: true,   // Show alternative routes if available
+      lineOptions: {
+        styles: [{ color: 'blue', opacity: 0.8, weight: 6 }] // Styling the route line
+      }
     }).addTo(map);
-    
   </script>
 </body>
 </html>
