@@ -21,6 +21,7 @@ for (let num of arr1) {
         }
        
     }
+    
 }
 
 console.log(res)
