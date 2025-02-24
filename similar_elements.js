@@ -21,7 +21,7 @@ for (let num of arr1) {
         }
        
     }
-    
+
 }
 
 console.log(res)
@@ -33,7 +33,7 @@ arr2 = [1, 0, 3, 8, 9, 6, 6]
 
 res = []
 
-for i in arr1:
-    if i in arr2 and i not in res:
-        res.append(i)
-print (res)
+// for i in arr1:
+//     if i in arr2 and i not in res:
+//         res.append(i)
+// print (res)
