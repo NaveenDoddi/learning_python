@@ -23,3 +23,4 @@ if temp_alpha:
         
 print(alphas)
 print(numbers)
+
